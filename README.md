@@ -39,7 +39,8 @@ Storage的两个实例提供了以下五个方法：
 * 支持七种数据存储格式
 > - String，Number，Boolean，Function，Date，Object，Array
 
-* 存入什么格式，取出什么格式
+
+* 存入什么数据类型，取出什么数据类型
 * 通过原生方法存入的数据，只能取出字符串
 * 与原生方法共存
 * 易扩展
@@ -85,3 +86,6 @@ var objData = JSON.parse(stringD)
 var objData = EStorage.session.get('objData');
 ```
 
+-----
+
+*欢迎提出意见或建议：*[联系我](https://github.com/James-Nie/EStorage)
