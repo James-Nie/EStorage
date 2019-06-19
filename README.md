@@ -14,8 +14,6 @@
 
 ### **npm：**
 
-需要使用公司内部源地址
-
 ```bash
 npm install EStorage
 ```
