@@ -1,0 +1,49 @@
+{
+  "_from": "EStorage@1.1.0",
+  "_id": "EStorage@1.1.0",
+  "name": "EStorage",
+  "version": "1.1.0",
+  "description": "A extend tool of Web Storage",
+  "main": "dist/EStorage.min.js",
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "EStorage@1.1.0",
+    "name": "EStorage",
+    "escapedName": "EStorage",
+    "saveSpec": null,
+    "fetchSpec": "1.1.0"
+  },
+  "scripts": {
+    "build": "node build/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://af.hikvision.com.cn/artifactory/api/npm/npm-pbg/"
+  },
+  "keywords": [
+    "Web Storage",
+    "javascript",
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://af.hikvision.com.cn/artifactory/api/npm/npm-pbg/"
+  },
+  "author": "niejianbo@hikvision.com.cn",
+  "license": "MIT",
+  "jest": {
+    "globals": {
+      "window": true
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "babel-loader": "^8.0.5",
+    "chalk": "^2.4.2",
+    "copy": "^0.3.2",
+    "ora": "^3.1.0",
+    "rimraf": "^2.6.3",
+    "webpack": "^4.29.5"
+  }
+}
