@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../dist/extend-storage.min.js"></script>
+</head>
+
+<body>
+  <style>
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+
+  </style>
+  <div>
+    <ul>
+      <li><button onclick="setLocal(5000)">setLocal expireIn</button></li>
+      <li><button onclick="setLocal()">setLocal</button></li>
+      <li><button onclick="getLocal()">getLocal</button></li>
+      <li><button onclick="removeLocal()">removeLocal</button></li>
+    </ul>
+
+    <ul>
+      <li><button onclick="setSession(5000)">setSession Expire</button></li>
+      <li><button onclick="setSession()">setSession</button></li>
+      <li><button onclick="getSession()">getSession</button></li>
+      <li><button onclick="removeSession()">removeSession</button></li>
+    </ul>
+  </div>
+  <script>
+    function setLocal(expireIn) {
+      EStorage.local.set('localDataTest', { key: 'value' }, expireIn)
+      console.log(EStorage.local.get('localDataTest'));
+
+      if (expireIn) {
+        const timer = setInterval(() => {
+          console.log(EStorage.local.get('localDataTest'));
+          if (!EStorage.local.get('localDataTest')) {
+            console.log('expired===', EStorage.local.get('localDataTest'));
+            clearInterval(timer);
+          }
+        }, 1000);
+      }
+
+    }
+
+    function getLocal() {
+      console.log('get', EStorage.local.get('localDataTest'))
+    }
+
+    function removeLocal() {
+      EStorage.local.remove('localDataTest')
+      console.log(EStorage.local.get('localDataTest'));
+    }
+
+    // session
+    function setSession(expireIn) {
+      EStorage.session.set('sessionDataTest', { sesionKey: 'sessionValue' }, expireIn)
+      console.log(EStorage.session.get('sessionDataTest'));
+
+      if (expireIn) {
+        const timer = setInterval(() => {
+          console.log(EStorage.session.get('sessionDataTest'));
+          if (!EStorage.session.get('sessionDataTest')) {
+            console.log('expired===', EStorage.session.get('sessionDataTest'));
+            clearInterval(timer);
+          }
+        }, 1000);
+      }
+    }
+
+    function getSession() {
+      console.log('get', EStorage.session.get('sessionDataTest'))
+    }
+
+    function removeSession() {
+      EStorage.session.remove('sessionDataTest')
+      console.log(EStorage.session.get('sessionDataTest'));
+    }
+
+  </script>
+</body>
+
+</html>

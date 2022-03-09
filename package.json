@@ -1,35 +1,32 @@
 {
-  "_from": "EStorage@1.1.0",
-  "_id": "EStorage@1.1.0",
-  "name": "EStorage",
-  "version": "1.1.0",
+  "name": "extend-storage",
+  "version": "1.0.1",
   "description": "A extend tool of Web Storage",
-  "main": "dist/EStorage.min.js",
+  "main": "dist/extend-storage.min.js",
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "EStorage@1.1.0",
-    "name": "EStorage",
-    "escapedName": "EStorage",
+    "raw": "extend-storage@1.0.1",
+    "name": "extend-storage",
+    "escapedName": "extend-storage",
     "saveSpec": null,
-    "fetchSpec": "1.1.0"
+    "fetchSpec": "1.0.1"
   },
   "scripts": {
     "build": "node build/build.js"
   },
   "repository": {
     "type": "git",
-    "url": "http://af.hikvision.com.cn/artifactory/api/npm/npm-pbg/"
+    "url": "https://github.com/James-Nie/EStorage"
   },
   "keywords": [
     "Web Storage",
+    "localStorage",
+    "sessionStorage",
     "javascript",
     "lib"
   ],
-  "publishConfig": {
-    "registry": "http://af.hikvision.com.cn/artifactory/api/npm/npm-pbg/"
-  },
-  "author": "niejianbo@hikvision.com.cn",
+  "author": "https://github.com/James-Nie",
   "license": "MIT",
   "jest": {
     "globals": {

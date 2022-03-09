@@ -10,11 +10,11 @@ const config = {
   output: {
     filename: `${pkg.name}.min.js`,
     path: path.resolve(rootPath, 'dist'),
-    library: `${pkg.name}`,
+    library: `EStorage`,
     libraryTarget: 'umd'
   },
   externals: {
-    
+
   },
   module: {
     rules: [{
